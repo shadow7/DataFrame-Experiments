@@ -16,9 +16,9 @@ fun main() {
     val size by column<Int>("Size")
     val region by column<String>("Region")
     val state by column<String>("State")
-    val priceHistory by column<Pair<Date, Double>>("Price History")
-    val date by column<Pair<Date, Double>>("Date")
-    val price by column<Pair<Date, Double>>("Price")
+    val priceHistory by column<Pair<Date, Double?>>("Price History")
+    val date by column<Date>("Date")
+    val price by column<Double?>("Price")
 
     //Read the housing data csv
     val df = DataFrame.read("src/main/resources/state_housing_data.csv")
